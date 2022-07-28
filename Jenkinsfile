@@ -21,5 +21,6 @@ steps {
  sh "cp -r path.html /var/www/html"
                  }
  }
+ }
      }
 }
