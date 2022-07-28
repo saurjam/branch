@@ -10,5 +10,11 @@ stages {
   sh "cp -r index.html /var/www/html"
                   }
          }
+ stage ("two") {
+  
+ steps {
+ sh "cp -r dev.html /var/www/html"
+              }
+ }
      }
 }
