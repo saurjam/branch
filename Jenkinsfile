@@ -15,6 +15,11 @@ stages {
  steps {
  sh "cp -r dev.html /var/www/html"
               }
+  stage ("three") {
+   
+steps {
+ sh "cp -r path.html /var/www/html"
+                 }
  }
      }
 }
