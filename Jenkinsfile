@@ -4,27 +4,27 @@ agent any
 
 stages {
 
- stage ('copy index') {
+ stage ("copy index") {
 
   steps {
   sh "cp -r index.html >> /var/www/html"
                   }
-stage ('two') {
+stage ("two") {
  steps {
  sh "cp -r dev.html >> /var/www/html"
               }
 }
-stage ('three') {
+stage ("three") {
 steps {
  sh "cp -r path.html >> /var/www/html"
                  }
    }
-stage ('four') {
+stage ("four") {
 steps {
 sh "service httpd restart"
                }
 }
-stage ('five'){
+stage ("five"){
 steps {
 sh "chmod -R 777 /var/www/html/"
                }
