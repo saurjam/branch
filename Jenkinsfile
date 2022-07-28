@@ -6,26 +6,26 @@ stages {
 
  stage ('copy index') {
 
-  steps ('one') {
+  steps {
   sh "cp -r index.html >> /var/www/html"
                   }
-stage {
- steps ('two'){
+stage ('two') {
+ steps {
  sh "cp -r dev.html >> /var/www/html"
               }
 }
-Stage {
-steps ('three') {
+stage ('three') {
+steps {
  sh "cp -r path.html >> /var/www/html"
                  }
    }
-stage {
-steps ('four') {
+stage ('four') {
+steps {
 sh "service httpd restart"
                }
 }
-stage {
-steps ('five') {
+stage ('five'){
+steps {
 sh "chmod -R 777 /var/www/html/"
                }
 }
